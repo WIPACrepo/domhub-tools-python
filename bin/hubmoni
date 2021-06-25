@@ -44,8 +44,8 @@ def keepConnecting(s, addr, logger):
             s.connect(addr)
         except zmq.ZMQError:
             logger.warn("couldn't connect to socket at %s" % addr)
-            logger.warn("trying again in a minute...")
-            time.sleep(SOCKET_WAIT)
+            logger.warn("trying again shortly...")
+            time.sleep(10)
         else:
             logger.info("Connected to ZMQ listener at %s" % addr)
             return
