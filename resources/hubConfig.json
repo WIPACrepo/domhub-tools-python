@@ -800,6 +800,13 @@
             "iceboot": 64,
             "quad": 16,
             "waive": []
+        },
+        "ithub01": {
+            "comm": 0,
+            "dor": 1,
+            "iceboot": 0,
+            "quad": 0,
+            "waive": []
         }
     }
 }

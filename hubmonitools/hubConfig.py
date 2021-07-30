@@ -41,7 +41,7 @@ def getHostCluster(hostname=None):
         p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         if p:
             stdout, stderr = p.communicate()
-            hostname = stdout
+            hostname = stdout.decode()
             
     address = hostname.split('.')
     host = address[0].rstrip()
