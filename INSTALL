@@ -4,19 +4,23 @@ quantities to IceCube Live as well as user alerts for DOM / DOR problems.
 
 Can be installed on a set of DOMHub from pdaq@sp[t]s-access with
 
-    $ fab pack deploy
+    $ fab2 deploy
 
-This will also install a cron job on the hub that will start the script.
+This will also install a cron job on the hubs that will start the script.
 
 Configuration files can be updated without redeploying the entire package,
 with
 
-    $ fab config restart
+    $ fab2 config restart
+
+A single hub can be targeted with the -H argument, e.g.
+
+    $ fab2 -H <hub> deploy
 
 --
 
 For standalone installation on, for example, a lab DOMHub, the "fab"
-command is not available.  Instead, on the hub itself as the testdaq user,
+command is not available.  Instead, on the hub itself as the pdaq user,
 check out this repository and execute
 
     $ python setup.py install --user

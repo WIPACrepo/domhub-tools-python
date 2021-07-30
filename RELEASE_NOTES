@@ -1,3 +1,6 @@
+v1.8.2 -- 30 July 2021
+* 8850: port fabfile to Fabric2
+
 v1.8.1 -- 25 June 2021
 * 8843: ZMQ socket retry interval undefined
 
