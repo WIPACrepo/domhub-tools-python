@@ -48,6 +48,7 @@ def deploy(ctx):
         group = ThreadingGroup(ctx.host)
 
     for c in group:
+        c.config.run.replace_env = False # Keep shell env
         # upload the source tarball to the temporary folder on the server
         c.put('dist/%s.tar.gz' % dist, '/tmp/%s.tar.gz' % dist)
         # now install the package with pip
